@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Echo — Music for this moment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Echo home"><span class="brand-mark">e</span><span>echo</span></a>
+    <nav aria-label="Primary navigation"><a class="active" href="#discover">Discover</a><a href="#library">Library <span class="nav-count" id="savedCount">0</span></a></nav>
+    <button class="avatar" id="profileButton" aria-label="Open profile">JS</button>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="discover">
+      <div class="hero-copy">
+        <p class="eyebrow">Personal radio / 09.06.26</p>
+        <h1>Find your<br /><em>next feeling.</em></h1>
+        <p class="hero-text">Tell Echo where your head is at. Our tiny AIML brain turns the signal into a soundtrack that feels like you.</p>
+        <div class="signal" aria-label="Current mood signal"><span class="signal-dot"></span><span>Signal detected</span><span class="signal-line"></span><span id="signalLabel">Soft focus</span></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract album artwork">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="sun"></div><div class="art-note">04<br /><span>SONIC<br />WEATHER</span></div>
+      </div>
+    </section>
+
+    <section class="mood-section">
+      <div class="section-heading"><p class="eyebrow">01 / Set the tone</p><span class="hint">Pick one, or ask below</span></div>
+      <div class="moods" role="group" aria-label="Mood choices">
+        <button class="mood active" data-mood="focus"><span class="mood-icon">◒</span><span>Soft focus</span><small>ambient / warm</small></button>
+        <button class="mood" data-mood="energy"><span class="mood-icon">✦</span><span>Need a lift</span><small>bright / kinetic</small></button>
+        <button class="mood" data-mood="night"><span class="mood-icon">◐</span><span>After dark</span><small>deep / nocturnal</small></button>
+        <button class="mood" data-mood="open"><span class="mood-icon">⌁</span><span>Wide open</span><small>curious / free</small></button>
+      </div>
+      <form class="ask" id="askForm"><span class="ask-symbol">↗</span><input id="askInput" type="text" placeholder="Or say something like “music for a rainy train ride”" autocomplete="off" /><button type="submit">Ask Echo <span>→</span></button></form>
+    </section>
+
+    <section class="recommendations" id="library">
+      <div class="section-heading"><div><p class="eyebrow">02 / Curated for you</p><h2 id="resultTitle">Soft focus, in stereo</h2></div><button class="refresh" id="refreshButton" aria-label="Refresh recommendations">↻ <span>Refresh</span></button></div>
+      <div class="track-grid" id="trackGrid"></div>
+    </section>
+  </main>
+
+  <footer><span>Echo / Personal music intelligence</span><span class="footer-status"><span class="signal-dot"></span> AIML engine online</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>

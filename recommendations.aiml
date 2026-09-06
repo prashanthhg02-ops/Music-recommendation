@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  <category>
+    <pattern>RECOMMEND FOCUS MUSIC</pattern>
+    <template>
+      <set name="mood">focus</set>
+      <random>
+        <li>A Walk by Tycho</li>
+        <li>Show Me How by Men I Trust</li>
+        <li>Near Light by Olafur Arnalds</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>RECOMMEND ENERGY MUSIC</pattern>
+    <template><set name="mood">energy</set>Loud Places by Jamie xx</template>
+  </category>
+  <category>
+    <pattern>RECOMMEND NIGHT MUSIC</pattern>
+    <template><set name="mood">night</set>Roads by Portishead</template>
+  </category>
+  <category>
+    <pattern>RECOMMEND OPEN MUSIC</pattern>
+    <template><set name="mood">open</set>Holocene by Bon Iver</template>
+  </category>
+</aiml>

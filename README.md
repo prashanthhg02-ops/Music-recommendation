@@ -1,4 +1,3 @@
-# Music-recommendation
 # Echo
 
 A dependency-free music recommendation interface powered by a small AIML-style mood intent layer.
